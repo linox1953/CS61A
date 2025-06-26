@@ -10,7 +10,7 @@ def sum_rec(s, k):
     0
     """
     # Use a recursive call to sum_rec; don't call sum_iter
-    if s == Link.empty or not k:
+    if s is Link.empty or not k:
         return 0
     else:
         return s.first + sum_rec(s.rest, k-1)
@@ -29,7 +29,7 @@ def sum_iter(s, k):
     # Don't call sum_rec or sum_iter
     total = 0
     for _ in range(k):
-        if s == Link.empty:
+        if s is Link.empty: # Why use 'is' but not '=='
             break
         total += s.first
         s = s.rest
