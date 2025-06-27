@@ -25,3 +25,5 @@ class Tree:
 
     def is_leaf(self):
         return not self.branches
+
+Tree(3, [Tree(3, [Tree(2)]), Tree(4)])

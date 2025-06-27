@@ -19,7 +19,3 @@ def is_tree(tree):
         if not is_tree(branch):
             return False
     return True
-
-t2 = tree(5, [tree(6), tree(7)])
-t1 = tree(3, [tree(4), t2])
-print(label(branches(t2)))
